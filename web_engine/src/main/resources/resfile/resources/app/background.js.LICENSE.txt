@@ -1,0 +1,18 @@
+/*!
+   * mustache.js - Logic-less {{mustache}} templates with JavaScript
+   * http://github.com/janl/mustache.js
+   */
+
+/*!
+ * Tmp
+ *
+ * Copyright (c) 2011-2017 KARASZI Istvan <github@spam.raszi.hu>
+ *
+ * MIT Licensed
+ */
+
+/**
+ * @author      Created by Marcus Spiegel <spiegel@uscreen.de> on 2011-03-25.
+ * @link        https://github.com/mashpie/i18n-node
+ * @license     http://opensource.org/licenses/MIT
+ */

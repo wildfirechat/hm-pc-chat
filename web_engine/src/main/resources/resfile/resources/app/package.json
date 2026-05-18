@@ -1,0 +1,26 @@
+{
+  "name": "wf-pc-chat",
+  "company": "wildfire",
+  "version": "1.1.1",
+  "description": "WF IM PC Client",
+  "appId": "cn.wildfire.chat",
+  "private": true,
+  "homepage": "https://wildfirechat.cn",
+  "maintainers": [
+    "imndx"
+  ],
+  "author": {
+    "email": "imndxx@wildirechat.cn",
+    "name": "imndx"
+  },
+  "main": "background.js",
+  "dependencies": {
+    "electron-screenshots": "0.5.11"
+  },
+  "optionalDependencies": {
+    "electron-clipboard-ex": "^1.3.3"
+  },
+  "overrides": {
+    "webpack": "5.91.0"
+  }
+}
