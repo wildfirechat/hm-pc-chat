@@ -5,7 +5,7 @@
 2. 本项目启动后，Electron 会加载运行`web_engine/src/main/resources/resfile/resources/app`
 3. `web_engine/src/main/resources/resfile/resources/app` 是通过 [vue-pc-chat](https://github.com/wildfirechat/vue-pc-chat) 打包生成的
 
-## 野火IM PC端功能更新
+### 更新野火IM PC端功能
 请参考[README_ohos.md](https://github.com/wildfirechat/vue-pc-chat/README_ohos.md)
 
 ### 运行
