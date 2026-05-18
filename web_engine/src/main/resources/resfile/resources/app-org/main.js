@@ -11,12 +11,24 @@ function createWindow() {
         backgroundColor: 'white', // 半透明蓝色
         //titleBarStyle: 'hiddenInset',
         titleBarStyle: 'default',
-        frame:false
+        frame:false,
+        webPreferences: {
+            scrollBounce: false,
+            nodeIntegration: true,
+            contextIsolation: false,
+            nativeWindowOpen: true,
+            webSecurity: false,
+            webviewTag: true,
+            zoomFactor: 1.0
+
+            // 如果想打包之后的版本，不能打开调试控制台，请取消下面的注释
+            // devTools: !app.isPackaged,
+        },
     });
     mainWindow.removeMenu();
     mainWindow.loadURL('https://wildfirechat.cn');
 
-    // mainWindow.webContents.openDevTools()
+    mainWindow.webContents.openDevTools()
 }
 
 // 模拟器上不支持
