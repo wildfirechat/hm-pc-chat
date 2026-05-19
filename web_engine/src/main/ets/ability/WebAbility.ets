@@ -285,7 +285,8 @@ export class WebAbility extends WebBaseAbility {
       this.closable = this.closable && !this.hideTitleBar;
       window.setResizeByDragEnabled(this.resizable);
       if (this.deviceInfoAdapter?.isNormalWindowMode() === false) {
-        window.setWindowTitleButtonVisible(this.maximizable, this.minimizable, this.closable);
+        //window.setWindowTitleButtonVisible(this.maximizable, this.minimizable, this.closable);
+        window.setWindowTitleButtonVisible(true, true, true);
         window.setWindowTitleMoveEnabled(!this.hideTitleBar);
         windowStage.setWindowModal(this.isModal);
         if (this.isPanel)

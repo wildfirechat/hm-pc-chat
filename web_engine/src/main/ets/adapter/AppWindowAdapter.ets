@@ -486,6 +486,9 @@ export class AppWindowAdapter extends BaseAdapter {
 
   @LogMethod
   setUseNativeFrame(id: number, useNativeFrame: boolean) {
+    if(true){
+      return
+    }
     let windowClass = this.getWindow(id);
     try {
       windowClass?.setWindowDecorVisible(useNativeFrame);
