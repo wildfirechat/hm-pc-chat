@@ -224,13 +224,14 @@ export class PasteBoardAdapter extends BaseAdapter {
       const count: number = v.getRecordCount();
       let filePaths = new Array<string>();
       let fileData: string = '';
+      let dataUris:string[] = []
       for (let i = 0; i < count; i++) {
         let recordData = v.getRecord(i);
         if (recordData.uri !== undefined) {
-          fileData = StringUtil.filterFileDocs(recordData.uri);
-          filePaths.push(fileData);
+          dataUris.push(fileData);
         }
       }
+      filePaths = StringUtil.uriConvert(dataUris);
       callback(filePaths);
     }).catch((err: BusinessError) => {
       LogUtil.error(TAG, `Failed to read uri, code is:${JSON.stringify(err.message)}`);
