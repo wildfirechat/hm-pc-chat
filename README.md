@@ -11,5 +11,16 @@
 ### 运行
 使用`DevEco Studio`即可运行、打包、发布
 
+### 上架前，特殊权限申请
+```
+ohos.permission.READ_WRITE_DESKTOP_DIRECTORY
+ohos.permission.SYSTEM_FLOAT_WINDOW
+ohos.permission.READ_WRITE_DOCUMENTS_DIRECTORY
+ohos.permission.READ_WRITE_DOWNLOAD_DIRECTORY
+ohos.permission.READ_PASTEBOARD
+ohos.permission.FILE_ACCESS_PERSIST
+
+```
+
 ### 参考
 [ohos electron](https://gitcode.com/openharmony-sig/electron)

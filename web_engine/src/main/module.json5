@@ -52,9 +52,9 @@
       {
         "name": "ohos.permission.LOCK_WINDOW_CURSOR"
       },
-      {
-        "name": "ohos.permission.WEB_NATIVE_MESSAGING"
-      },
+//      {
+//        "name": "ohos.permission.WEB_NATIVE_MESSAGING"
+//      },
       {
         "name": "ohos.permission.READ_PASTEBOARD",
         "reason": "$string:access_pasteboard",
