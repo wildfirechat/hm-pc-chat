@@ -94,17 +94,17 @@ export class PermissionManagerAdapter extends BaseAdapter {
   }
 
   @LogMethod
-  requestPermissions(permissionType: string, callback: (granted: number) => void) {
+  requestPermissions(permissionType: string, callback: ((granted: number) => void) | null | undefined) {
     const permissions = this.needPermissions.get(permissionType);
     if (!permissions) {
       LogUtil.error(TAG, 'unsupported permission:' + permissionType);
-      callback(REQUEST_PERMISSION_FAIL);
+      callback?.(REQUEST_PERMISSION_FAIL);
       return;
     }
     let activeContext = this.ctxAdapter.getActiveContext();
     if (!activeContext) {
       LogUtil.error(TAG, 'requestPermissions, no active context');
-      callback(REQUEST_PERMISSION_FAIL);
+      callback?.(REQUEST_PERMISSION_FAIL);
       return;
     }
 
@@ -115,20 +115,20 @@ export class PermissionManagerAdapter extends BaseAdapter {
           for (let i = 0; i < grantStatus.length; i++) {
             if (grantStatus[i] !== 0) {
               LogUtil.error(TAG, 'Request permissions is failed, err:' + JSON.stringify(data));
-              callback(grantStatus[i]);
+              callback?.(grantStatus[i]);
               return;
             }
           }
-          callback(REQUEST_PERMISSION_SUCCESS);
+          callback?.(REQUEST_PERMISSION_SUCCESS);
         }).catch((err: BusinessError) => {
         LogUtil.error(TAG, 'Request permissions is failed, type:' + permissionType + 
         ', err:BusinessError: ' + JSON.stringify(err));
-        callback(REQUEST_PERMISSION_FAIL);
+        callback?.(REQUEST_PERMISSION_FAIL);
       });
     } catch (err) {
       LogUtil.error(TAG, 'Request permissions is failed, type:' + permissionType + 
         ', err:' + JSON.stringify(err));
-      callback(REQUEST_PERMISSION_FAIL);
+      callback?.(REQUEST_PERMISSION_FAIL);
     }
   }
 

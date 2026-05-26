@@ -10,7 +10,7 @@ function implPermissionManagerAdapter(): PermissionManagerAdapter {
   return Inject.getOrCreate(PermissionManagerAdapter);
 }
 
-function requestPermissions(permissionType: string, callback: (permissionGranted: number) => void) {
+function requestPermissions(permissionType: string, callback: ((permissionGranted: number) => void) | undefined | null) {
   implPermissionManagerAdapter().requestPermissions(permissionType, callback);
 }
 

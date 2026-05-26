@@ -19,10 +19,10 @@ export default class EntryAbility extends WebAbility {
     super.onCreate(want, launchParam);
 
     // 截图权限预申请
-    setTimeout(() => {
-      const permissions: Permissions[] = ['ohos.permission.CUSTOM_SCREEN_CAPTURE'];
-      this.reqPermissionsFromUser(permissions, this.context);
-    }, 10 * 1000)
+    // setTimeout(() => {
+    //   const permissions: Permissions[] = ['ohos.permission.CUSTOM_SCREEN_CAPTURE'];
+    //   this.reqPermissionsFromUser(permissions, this.context);
+    // }, 10 * 1000)
   }
 
 
