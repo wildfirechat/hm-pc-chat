@@ -11,6 +11,8 @@
  * MIT Licensed
  */
 
+/*! http://mths.be/fromcodepoint v0.1.0 by @mathias */
+
 /**
  * @author      Created by Marcus Spiegel <spiegel@uscreen.de> on 2011-03-25.
  * @link        https://github.com/mashpie/i18n-node
