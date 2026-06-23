@@ -6,10 +6,18 @@
 3. `web_engine/src/main/resources/resfile/resources/app` 是通过 [vue-pc-chat](https://github.com/wildfirechat/vue-pc-chat) 打包生成的
 
 ### 更新野火IM PC端功能
-请参考[README_ohos.md](https://github.com/wildfirechat/vue-pc-chat/README_ohos.md)
+请参考[README_ohos.md](https://github.com/wildfirechat/vue-pc-chat/blob/master/README_ohos.md)
 
 ### 运行
 使用`DevEco Studio`即可运行、打包、发布
+
+### 模拟器调试特别说明
+由于模拟器不支持硬件加速，打包`vue-pc-chat`时，需要禁用硬件加速；
+```c
+//background.js 文件搜索下面这行，并取消注释
+//app.disableHardwareAcceleration();
+```
+但正式发布时，不能禁用硬件加速，以便获得更好的体验
 
 ### 上架前，特殊权限申请
 ```
