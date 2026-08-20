@@ -18,3 +18,4 @@
 build-profile.json5-local
 *.js.map
 /.yarn
+/electron/libs/arm64-v8a/libelectron.so
