@@ -10,7 +10,7 @@
 
 ### 运行
 1. 解压`libelectron.so.zip`，将解压出来的`libelectron.so`放到`electron/libs/arm64-v8a/`目录下
-2. 鸿蒙 PC SDK，也就是`electron/libs/marswrapper.node`文件，是需要付费的，请联系官方申请试用；申请后，请替换该文件
+2. 鸿蒙 PC SDK，也就是`electron/libs/marswrapper.node`文件，是需要付费的，默认只能连到官方服务。请联系官方申请试用，申请后，请替换该文件
 3. 使用`DevEco Studio`即可运行、打包、发布
 
 ### 模拟器调试特别说明
@@ -37,3 +37,6 @@ ohos.permission.FILE_ACCESS_PERSIST
 
 ### 参考
 [ohos electron](https://gitcode.com/openharmony-sig/electron)
+
+### 联系我们
+微信：wfchat 或 wildfirechat
